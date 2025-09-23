@@ -7,7 +7,7 @@ st.title("YOLO Image Detection App :)")
 
 # Load YOLO model
 # model = YOLO("runs/detect/train73/weights/best.pt")
-model = YOLO("yolo11n.pt")
+model = YOLO("best.pt")
 
 # Upload image
 uploaded_image = st.file_uploader("Upload an image (jpg, png)", type=["jpg", "jpeg", "png"])
@@ -36,5 +36,5 @@ if uploaded_image is not None:
   class_names = [model.names[i] for i in class_ids]
                                                                       
   # Count people
-  person_count = class_names.count("person")
-  st.write(f"Number of people detected: **{person_count}**")
+  # person_count = class_names.count("person")
+  # st.write(f"Number of people detected: **{person_count}**")
